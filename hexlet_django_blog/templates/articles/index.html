@@ -3,7 +3,7 @@
 {% block content %}
     <h1>List pages</h1>
     {% for article in articles %}
-        <a href="nam">{{ article.name }}</a>
+        <a href="{% url 'app-id' article.id %}">{{ article.name }}</a>
         <div>{{ article.body|slice:":200" }}</div>
     {% endfor %}
 {% endblock %}
