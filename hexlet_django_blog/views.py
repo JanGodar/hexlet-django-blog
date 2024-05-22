@@ -5,7 +5,8 @@ from django.urls import reverse
 
 
 def article(request):
-    return HttpResponseRedirect(reverse('red', kwargs={'tags': 'python', 'article_id': 42}))
+    return render(request, 'base.html')
+# return HttpResponseRedirect(reverse('red', kwargs={'tags': 'python', 'article_id': 42}))
 
 
 def about(request):
